@@ -1,0 +1,45 @@
+﻿@model List<Offer1.Models.Entities.User>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<table class="table">
+    <tr>
+        <th>Company</th>
+        <th>Mode</th>
+        <th>Movement Type</th>
+        <th>Incoterm</th>
+        <th>Countries</th>
+        <th>Cities</th>
+        <th>Package Type</th>
+        <th>Unit-1</th>
+        <th>Size</th>
+        <th>Unit-2</th>
+        <th>Kilo</th>
+        <th>Currency</th>
+        <th>Teklif</th>
+    </tr>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <th>@user.Company</th>
+            <th>@user.Mode</th>
+            <th>@user.MovementType</th>
+            <th>@user.Incoterm</th>
+            <th>@user.Countries</th>
+            <th>@user.Cities</th>
+            <th>@user.PackageType</th>
+            <th>@user.Unit1</th>
+            <th>@user.Size</th>
+            <th>@user.Unit2</th>
+            <th>@user.Kilo</th>
+            <th>@user.Currency</th>
+            <th>@user.Teklif</th>
+
+        </tr>
+    }
+
+</table>
+

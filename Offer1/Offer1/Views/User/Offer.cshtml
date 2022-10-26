@@ -1,0 +1,176 @@
+﻿@model Offer1.Models.Entities.User
+@{
+    ViewBag.Title = "Offer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Offer</h2>
+<form class="form-horizontal" method="post" action="/User/offer">
+    <div class="form-group">
+        <label>Company Name</label>
+        <input type="text" class="form-control" name="Company" />
+    </div>
+    <div class="form-group">
+        <label>Mode</label>
+        <div class="form-group">
+            <input list="M" name="Mode" />
+            <datalist id="M">
+                <option value="0">-------</option>
+
+                <option value="LCL">LCL</option>
+
+                <option value="FCL">FCL</option>
+
+                <option value="AİR">AİR</option>
+
+            </datalist>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Movement Type</label>
+        <div class="form-group">
+            <input list="Mo" name="MovementType" />
+            <datalist id="Mo">
+                <option value="0">-------</option>
+
+                <option value="Door to Door">Door to Door</option>
+
+                <option value="Port to Door">Port to Door</option>
+
+                <option value="Door to Por">Door to Port</option>
+
+                <option value="Port to Port">Port to Port</option>
+
+            </datalist>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Incoterm</label>
+        <div class="form-group">
+            <input list="In" name="Incoterm" />
+            <datalist id="In">
+                <option value="0">-------</option>
+
+                <option value="Delivered Duty Paid">Delivered Duty Paid</option>
+
+                <option value="Delivered At Place">Delivered At Place</option>
+
+            </datalist>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Countries</label>
+        <div class="form-group">
+            <input list="Co" name="Countries" />
+            <datalist id="Co">
+
+                <option value="0">-------</option>
+
+                <option value="USA">USA</option>
+
+                <option value="CHİNA">CHİNA</option>
+
+                <option value="TURKİYE">TURKİYE</option>
+
+            </datalist>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Cities</label>
+        <div class="form-group">
+            <input list="Ci" name="Cities" />
+            <datalist id="Ci">
+                <option value="0">-------</option>
+
+                <option value="New York">New York</option>
+
+                <option value="Los Angeles">Los Angeles</option>
+
+                <option value="Miami">Miami</option>
+
+                <option value="Minnesota">Minnesota</option>
+                <option value="Beijing">Beijing</option>
+
+                <option value="Shanghai">Shanghai</option>
+
+                <option value="İstanbul">İstanbul</option>
+
+                <option value="İzmir">İzmir</option>
+            </datalist>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Package Type</label>
+        <div class="form-group">
+            <input list="Pa" name="PackageType" />
+            <datalist id="Pa">
+
+                <option value="0">-------</option>
+
+                <option value="Pallets">Pallets</option>
+
+                <option value="Boxes">Boxes</option>
+
+                <option value="Cartons">Cartons</option>
+
+            </datalist>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Unit-1</label>
+        <div class="form-group">
+            <input list="Un1" name="Unit1" />
+            <datalist id="Un1">
+
+                <option value="0">----</option>
+
+                <option value="CM">CM</option>
+
+                <option value="IN">IN</option>
+            </datalist>
+            <div>
+                <input type="text" class="form-control" name="Size" />
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Unit-2</label>
+        <div class="form-group">
+            <input list="Un2" name="Unit2" />
+            <datalist id="Un2">
+
+                <option value="0">----</option>
+
+                <option value="KG">KG</option>
+
+                <option value="LB">LB</option>
+
+            </datalist>
+            <div>
+                <input type="text" class="form-control" name="Kilo" />
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label>Currency</label>
+        <div class="form-group">
+            <input list="Cu" name="Currency" />
+            <datalist id="Cu">
+                <option value="0">-------</option>
+
+                <option value="US Dollar">US Dollar</option>
+
+                <option value="Chinese Yuan">Chinese Yuan</option>
+
+                <option value="Turkish Lira">Turkish Lira</option>
+            </datalist>
+            <div>
+            <input type="text" class="form-control" name="Teklif" />
+        </div>
+    </div>
+    </div>
+        <input type="submit" class="btn btn-primary" value="Save" />
+</form>
+
